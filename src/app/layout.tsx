@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Lora, Manrope } from "next/font/google";
+import { Lora, Manrope } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/header";
 
 const cormorantGaramond = Lora({
     variable: "--font-cormorantGaramond-sans",
@@ -44,7 +45,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             lang="en"
             className={`${cormorantGaramond.variable} ${manropeSans.variable} h-full antialiased`}
         >
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body className="min-h-full flex flex-col">
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }

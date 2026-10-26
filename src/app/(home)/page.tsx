@@ -1,9 +1,13 @@
+import { Container } from "../components/container";
+
 export default function Page() {
     return (
-        <div className="">
-            <h1 className="text-6xl font-medium font-title p-10">
-                Лучший кофе.
-            </h1>
+        <div>
+            <Container>
+                <div>
+                    <h1>Main</h1>
+                </div>
+            </Container>
         </div>
     );
 }
